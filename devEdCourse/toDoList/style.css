@@ -36,3 +36,14 @@ form button:hover {
   background: #d8b234;
   color: white;
 }
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
