@@ -15,19 +15,21 @@ function addTodo(event) {
   todoDiv.classList.add("todo");
   //Create Li
   const newTodo = document.createElement("li");
-  newTodo.innerText = "hey";
+  newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   //Check mark button
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
-  completedButton.classList.add("completed-btn");
+  completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
   //Check trash button
   const trashButton = document.createElement("button");
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-  trashButton.classList.add("completed-btn");
+  trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
   //APPEND TO LIST
   todoList.appendChild(todoDiv);
+  // CLEAR TODO INPUT VALUE
+  todoInput.value = "";
 }
